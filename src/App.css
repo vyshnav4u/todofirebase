@@ -1,38 +1,124 @@
-.App {
+*{box-sizing: border-box;
+  font-size: 16px;
+}
+
+.todo-container{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.task-name{
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.task-item-desc{
+  margin: 0;
+  
+}
+
+.task-item{
+    border-bottom: 1px solid #c4c4c4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+
+}
+
+.action-btn{
+  background: transparent;
+  border-radius: 50%;
+  border: none;
+}
+
+.action-btn:hover{
+  /* background: #c4c4c4; */
+}
+
+.btn-container{
+  display: flex;
+  flex-direction: row;
+  gap: 4px
+}
+
+.header-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin: 32px 0;
+  gap: 12px;
+}
+
+.task-lists-container{
+  padding: 12px;
+}
+
+.add-item-container{
+  display: grid;
+  align-items: center;
+  border-right: 1px solid #c4c4c4;
+  padding: 16px;
+}
+
+.todo-header h2{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.form-control{
+  display: grid;
+  gap: 12px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.add-todo-txt{
+  background: #fff;
+  width: 300px;
+  height: 30px;
+  border: 1px solid #c1c1c1;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submit-btn{
+  height: 30px;
+  width: 300px;
+  background: rgb(95, 95, 247);
+  color: #fff;
+  outline: none;
+  border: none;
+}
+
+.logout-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logout-wrap svg{
+  font-size: 16px;
+}
+
+.search-box{
+  outline: none;
+  border: 1px solid #c1c1c1;
+  height: 38px;
+  padding: 6px;
+  padding-right: 20px;
+  width: 100%;
+}
+
+.search-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+.search-icon{
+position: absolute;
+right: 20px;
 }
